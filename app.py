@@ -35,8 +35,8 @@ filepath = pathnamelogo
 img = ImageTk.PhotoImage(Image.open(pathnamelogo+ "\\logo.png"))
 panel = Label(win, image = img)
 panel.place(x=215,y=40)
-logoalttext = "GenpactxLSM@123"
-img2 = ImageTk.PhotoImage(Image.open(pathnamelogo+ "\\genpact.png"))
+logoalttext = "xx@123"
+img2 = ImageTk.PhotoImage(Image.open(pathnamelogo+ "\\xx.png"))
 panel2 = Label(win, image = img2)
 panel2.place(x=700,y=380)
 
@@ -2174,7 +2174,7 @@ def qualityBak():
             qctable.heading("claimdate",text="Process Date",anchor=CENTER)
             qctable.heading("operator",text="Processor",anchor=CENTER)
             qctable.heading("subject",text="Mail Subject",anchor=CENTER)
-            qctable.heading("comments",text="Genpact Comments",anchor=CENTER)
+            qctable.heading("comments",text="xx Comments",anchor=CENTER)
         
             query4 = ("select TOP {} id,claimNo,lastsaved,user,subject,comment from mailRecords"
                       " WHERE lob = '{}' AND worktype='{}' AND user IN {} "
@@ -2427,7 +2427,7 @@ def qualityBak():
     Label(frame2,text="Processed Date",bg="#1a1446",fg="white",font="Helvetica 10 bold").place(x=5,y=70,width=130)
     Label(frame2,text="Processor Name",bg="#1a1446",fg="white",font="Helvetica 10 bold").place(x=5,y=100,width=130)
     Label(frame2,text="Email Subject",bg="#1a1446",fg="white",font="Helvetica 10 bold").place(x=5,y=130,width=130)
-    Label(frame2,text="Genpact Comments",bg="#1a1446",fg="white",font="Helvetica 10 bold").place(x=5,y=160,width=130)
+    Label(frame2,text="xx Comments",bg="#1a1446",fg="white",font="Helvetica 10 bold").place(x=5,y=160,width=130)
     claimentry = Entry(frame2)
     cdateentry = Entry(frame2)
     opentry = Entry(frame2)
@@ -2594,7 +2594,7 @@ def quality():
             qctable.heading("operator",text="Processor",anchor=CENTER)
             qctable.heading("subject",text="Mail Subject",anchor=CENTER)
             qctable.heading("amount",text="Amount",anchor=CENTER)
-            qctable.heading("comments",text="Genpact Comments",anchor=CENTER)
+            qctable.heading("comments",text="xx Comments",anchor=CENTER)
             qctable.heading("auditor",text="Auditor",anchor=CENTER)
             qctable.heading("qcdate",text="QC Date",anchor=CENTER)
             qctable.heading("qcscore",text="Score",anchor=CENTER)
@@ -2736,7 +2736,7 @@ def quality():
         for i in range(len(setvalues)):
             tempp = str(values[i][2]) + ": " + str(setvalues[i]) + "\n"
             qdata = qdata + tempp
-        maildata = "Claim #: "+str(claim_)+ "\nProcessing Date: " + str(pdate_)+ "\nSubject: " + str(mailsub_)+ "\nAmount: " + str(amount_)+ "\nGenpact Comments: " + str(gencom_)+ "\n"
+        maildata = "Claim #: "+str(claim_)+ "\nProcessing Date: " + str(pdate_)+ "\nSubject: " + str(mailsub_)+ "\nAmount: " + str(amount_)+ "\nxx Comments: " + str(gencom_)+ "\n"
         db.execute("select mail from users where name = ? ",(pname_))
         usermail = db.fetchone()
         usermail = usermail[0]
@@ -3039,7 +3039,7 @@ def quality():
     Label(frame2,text="Processor Name",bg="#1a1446",fg="white",font="Helvetica 9 bold").place(x=5,y=88,width=130)
     Label(frame2,text="Email Subject",bg="#1a1446",fg="white",font="Helvetica 9 bold").place(x=5,y=116,width=130)
     Label(frame2,text="Amount",bg="#1a1446",fg="white",font="Helvetica 9 bold").place(x=5,y=144,width=130)
-    Label(frame2,text="Genpact Comments",bg="#1a1446",fg="white",font="Helvetica 9 bold").place(x=5,y=172,width=130)
+    Label(frame2,text="xx Comments",bg="#1a1446",fg="white",font="Helvetica 9 bold").place(x=5,y=172,width=130)
     claimentry = Entry(frame2)
     cdateentry = Entry(frame2)
     opentry = Entry(frame2)
