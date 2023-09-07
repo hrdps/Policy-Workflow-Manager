@@ -19,7 +19,7 @@ from tkinter import filedialog
 
 #main window properties
 root = Tk()
-root.title('Claim Automation Tracker')
+root.title('Policy Workflow Manager')
 root.geometry("850x480")
 
 #Frame for the homepage
@@ -46,7 +46,7 @@ panel2.place(x=700,y=380)
 a_driver = '{Microsoft Access Driver (*.mdb, *.accdb)}'
 dbpath = r''+ pathnamelogo +'\\claimsdb.accdb'
 conn = pyodbc.connect(DRIVER=a_driver,DBQ=dbpath, autocommit=True,PWD=logoalttext)
-#conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\n1569313\OneDrive - Liberty Mutual\Documents\claims.accdb;')
+
 db = conn.cursor()
 global loggedUser
 global loggedUserAuth
